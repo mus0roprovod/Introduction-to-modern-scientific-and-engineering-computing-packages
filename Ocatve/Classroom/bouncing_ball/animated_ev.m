@@ -1,0 +1,18 @@
+clf;
+ colormap (jet (21));
+ img = 1 ./ hilb (11);
+ x = y = -5:5;
+ subplot (2,2,1);
+  h = image (x, y, img);
+  ylabel ("limits = [-5.5, 5.5]");
+  title ("image (x, y, img)");
+ subplot (2,2,2);
+  h = image (-x, y, img);
+  title ("image (-x, y, img)");
+ subplot (2,2,3);
+  h = image (x, -y, img);
+  title ("image (x, -y, img)");
+  ylabel ("limits = [-5.5, 5.5]");
+ subplot (2,2,4);
+  h = image (-x, -y, img);
+  title ("image (-x, -y, img)");
